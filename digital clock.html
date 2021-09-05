@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>digital clock</title>
+	<style type="text/css">
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			background-color: #342ceb;
+		}
+		#clock
+		{
+			height: 20vh;
+			width: 40vw;
+			background-color: #348ceb;
+			position: fixed;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			box-shadow: 10px 10px 30px #000;
+			border-radius: 20px;
+		}
+		h1
+		{
+			font-size: 90px;
+			font-family: sans-serif;
+			text-align: center;
+			margin-top: 15px;
+			text-shadow: 4px 3px 0 #fff , 9px 8px 0 rgba(0,0,0,0.15);
+		}
+	</style>
+	<script type="text/javascript">
+		var myVar= setInterval(myTimer , 1000);
+		function myTimer()
+		{
+			var x=new Date();
+			document.getElementById('time').innerHTML =x.toLocaleTimeString();
+		}
+	</script>
+</head>
+<body>
+	<div id="clock">
+		<h1 id="time"></h1>
+	</div>
+</body>
+</html>
